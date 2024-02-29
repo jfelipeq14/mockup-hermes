@@ -1,0 +1,15 @@
+{
+  "name": "mockup-hermes",
+  "version": "1.0.0",
+  "description": "Diseño e implementación de mockup con bootstrap para Hermes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
