@@ -6,11 +6,18 @@
     <title>Hermes</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
-    <header>Happy Trails</header>
+  <body class="container">
+    <header class="p-2">
+      <p>
+        Happy Trails |
+        <a href="tel:+573207139262" class="text-decoration-none text-dark"
+          >3207139262</a
+        >
+      </p>
+    </header>
     <section id="alerts"></section>
-    <button type="button" class="btn btn-primary" id="btnAlerts">
-      View alert
+    <button type="button" class="btn btn-primary m-2" id="btnAlerts">
+      Show
     </button>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="./helpers/alert.js"></script>
