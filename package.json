@@ -4,7 +4,8 @@
   "description": "Diseño e implementación de mockup con bootstrap para Hermes.",
   "main": "index.js",
   "scripts": {
-    "start": "npm i"
+    "start": "npm i",
+    "git": "git pull origin develop"
   },
   "keywords": [],
   "author": "",
