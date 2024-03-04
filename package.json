@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm i",
-    "git": "git pull origin develop"
+    "git": "git checkout develop && git fetch origin develop && git pull origin develop"
   },
   "keywords": [],
   "author": "",

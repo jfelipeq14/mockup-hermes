@@ -1,52 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <title>Login - jfelipeq14</title>
-    <link rel="stylesheet" href="../style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    />
-  </head>
 
-  <body>
-    <div class="container col-md-6" id="container">
-      <div class="col-md-6 form-container sign-up-container">
-        <form class="form-label row g-3" action="#">
-          <h1>Create Account</h1>
-          <input type="email" placeholder="Email" class="form-control" />
-          <input type="password" placeholder="Password" class="form-control" />
-          <button type="submit" class="btn btn-primary">Sign Up</button>
-        </form>
-      </div>
-      <div class="col-md-6 form-container sign-in-container">
-        <form action="#" class="form-label row g-3">
-          <h1>Sign in</h1>
-          <input type="email" placeholder="Email" class="form-control" />
-          <input type="password" placeholder="Password" class="form-control" />
-          <a href="#">Forgot your password?</a>
-          <button type="submit" class="btn btn-primary">Sign In</button>
-        </form>
-      </div>
-      <div class="col-md-6 overlay-container">
-        <div class="overlay">
-          <div class="overlay-panel overlay-left">
-            <h1>Welcome Back!</h1>
-            <p>
-              To keep connected with us please login with your personal details
-            </p>
-            <button class="ghost btn btn-primary" id="signIn">Sign In</button>
-          </div>
-          <div class="col-md-6 overlay-panel overlay-right">
-            <h1>Hi There!</h1>
-            <p>Enter your personal details to open an account with us</p>
-            <button class="ghost btn btn-primary" id="signUp">Sign Up</button>
-          </div>
-        </div>
-      </div>
-    </div>
+<head>
+  <meta charset="utf-8" />
+  <title>Login - jfelipeq14</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <style>
+    section {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
 
-    <script src="script.js" charset="utf-8"></script>
-  </body>
+<body>
+  <article id="alerts"></article>
+  <section class="d-flex flex-column justify-content-center align-items-center">
+    <form class="text-center shadow p-5" id="formLogin">
+      <picture>
+        <img src="../img/hermes.jpg" class="w-25" alt="img">
+      </picture>
+      <h1 class="my-5">Iniciar sesión</h1>
+      <label class="d-block my-2">
+        <input type="email" placeholder="Email" class="form-control" required />
+      </label>
+      <label class="d-block my-2">
+        <input type="password" placeholder="Password" class="form-control" required />
+      </label>
+      <a class="d-block">¿Olvidaste la contraseña?</a>
+      <button type="submit" class="btn btn-primary my-2" id="btnAlerts">Ingresar</button>
+    </form>
+  </section>
+  <script src="../helpers/alert.js"></script>
+
+</body>
+
 </html>
