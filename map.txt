@@ -1,0 +1,9 @@
+inicio
+
+pages: auth
+
+secciones: ofertas - reservas - creditos
+
+articulos: carrusel - formularios - pie de pagina
+
+helpers: alertas
