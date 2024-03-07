@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Reservacion - Pablo</title>
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+  </head>
+  <body>
+    <main>
+      <form
+        class="container"
+        id="form-reservacion"
+      >
+        <article class="check-group">
+          <label class="switch socket">
+            <input
+              type="radio"
+              class="switch"
+              name="reserva"
+              value="hotel"
+              checked
+            />
+            <span class="switch slider" />
+            Hotel
+          </label>
+          <label class="switch socket">
+            <input
+              type="radio"
+              class="switch"
+              name="reserva"
+              value="hotel-vuelo"
+            />
+            <span class="switch slider" />
+            Hotel + Vuelo
+          </label>
+          <label class="switch socket">
+            <input
+              type="radio"
+              class="switch"
+              name="reserva"
+              value="hotel-bus"
+            />
+            <span class="switch slider" />
+            Hotel + Bus
+          </label>
+        </article>
+        <article class="input-group">
+          <label class="label">
+            <input
+              type="text"
+              class="input"
+              id="ciudad"
+              placeholder="Ciudad de Origen 🗺"
+              minlength="1"
+              maxlength="30"
+              required
+            />
+          </label>
+          <label class="label">
+            <input
+              type="text"
+              class="input"
+              id="hotel"
+              placeholder="Hotel 🏨"
+              minlength="1"
+              maxlength="30"
+              required
+            />
+          </label>
+          <label class="label">
+            <input
+              type="date"
+              class="input"
+              id="fecha"
+              placeholder="Fecha 📅"
+              min="2024-02-02"
+              max="2025-02-02"
+              required
+            />
+          </label>
+          <label class="label">
+            <input
+              type="number"
+              class="input"
+              id="habitaciones"
+              placeholder="Habitaciones 🛏️"
+              minlength="1"
+              maxlength="1"
+              required
+            />
+          </label>
+        </article>
+        <article>
+          <label>
+            <input
+              type="checkbox"
+              class="check"
+              name="promocion"
+              id="promocion"
+            />
+            ¿Tienes un código promocional?
+          </label>
+        </article>
+        <button
+          class="btn"
+          id="btnReservacion"
+        >
+          RESERVAR
+        </button>
+      </form>
+    </main>
+    <script src="./reservacion.js"></script>
+  </body>
+</html>
