@@ -1,39 +1,56 @@
-const btnBooking = document.getElementById('btnBooking')
-
-const bookings = []
-let booking = {}
-
-btnBooking.addEventListener('click', (e) => {
-  e.preventDefault()// Evitar que el formulario se envie de forma automatica
-  const formBooking = document.getElementById('formBooking')
-  // campos del formulario
-  const fullname = formBooking.fullname.value
-  const lastname = formBooking.lastname.value
-  const documentType = formBooking.documentType.value
-  const documentNumber = formBooking.documentNumber.value
-  const birthdate = formBooking.birthdate.value
-  const sex = formBooking.sex.value
-  const phoneNumber = formBooking.phoneNumber.value
-  const email = formBooking.email.value
-  const address = formBooking.address.value
-  const city = formBooking.city.value
-
-  if (fullname !== '' && lastname !== '' && documentType !== '' && documentNumber !== '' && birthdate !== '' && sex !== '' && phoneNumber !== '' && email !== '' && address !== '' && city !== '') {
-    // add data in object
-    booking = {
-      fullname,
-      lastname,
-      documentType,
-      documentNumber,
-      birthdate,
-      sex,
-      phoneNumber,
-      email,
-      address,
-      city
-    }
-    // Agregar la booking al array de bookingciones
-    if (booking) bookings.push(booking)
-  }
-  console.log(bookings)
-})
+export const pageBooking = [
+  '<form class="container" id="formBooking">',
+  '<fieldset class="container-personal">',
+  '<legend class="subtitle">Información Personal</legend>',
+  '<label>',
+  '<input type="text" id="fullname" class="input" placeholder="Nombre completo" minlength="2" required />',
+  '</label>',
+  '<label>',
+  '<input type="text" id="lastname" class="input" placeholder="Apellidos" minlength="2" required />',
+  '</label>',
+  '<label>',
+  '<select class="input" id="documentType" required>',
+  '<option selected>Tipo de de documento</option>',
+  '<option value="cc">Cedula</option>',
+  '</select>',
+  '</label>',
+  '<label>',
+  '<input type="text" id="documentNumber" class="input" placeholder="Numero de documento" \'minlength="10" maxlength="12" required />',
+  '</label>',
+  '<label>',
+  '<input type="date" id="birthdate" class="input" placeholder="Fecha de nacimiento" \'max="2006-01-31" required />',
+  '</label>',
+  '<div class="check-group">',
+  '<label class="switch socket">',
+  '<input type="radio" class="switch" name="sex" value="hombre" checked />',
+  '<span class="switch slider" />',
+  'Hombre',
+  '</label>',
+  '<label class="switch socket">',
+  '<input type="radio" class="switch" name="sex" value="mujer" />',
+  '<span class="switch slider" />',
+  'Mujer',
+  '</label>',
+  '</div>',
+  '</fieldset>',
+  '<fieldset class="container-contacto">',
+  '<legend class="subtitle">Información de contacto</legend>',
+  '<label>',
+  '<input type="tel" id="phoneNumber" class="input" placeholder="Número de teléfono" minlength="10" required />',
+  '</label>',
+  '<label>',
+  '<input type="email" id="email" class="input" placeholder="Correo electrónico" minlength="11" maxlength="50" required />',
+  '</label>',
+  '<label>',
+  '<input type="text" id="address" class="input" placeholder="Dirección" minlength="6" required />',
+  '</label>',
+  '<label>',
+  '<select class="input" id="city" required>',
+  '<option selected>Ciudad</option>',
+  '<option value="Medellín">Medellín</option>',
+  '</select>',
+  '</label>',
+  '</fieldset>',
+  '<button type="submit" id="btnBooking" class="btn">CONTINUAR</button>',
+  '</form>'
+].join('')

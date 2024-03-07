@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Login - jfelipeq14</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <style>
+    section {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+  <article id="alerts"></article>
+  <section class="d-flex flex-column justify-content-center align-items-center">
+    <form class="text-center shadow p-5" id="formLogin">
+      <picture>
+        <img src="../img/hermes.jpg" class="w-25" alt="img">
+      </picture>
+      <h1 class="my-5">Iniciar sesión</h1>
+      <label class="d-block my-2">
+        <input type="email" placeholder="Email" class="form-control" required />
+      </label>
+      <label class="d-block my-2">
+        <input type="password" placeholder="Password" class="form-control" required />
+      </label>
+      <a class="d-block">¿Olvidaste la contraseña?</a>
+      <button type="submit" class="btn btn-primary my-2" id="btnAlerts">Ingresar</button>
+    </form>
+  </section>
+  <script src="../helpers/alert.js"></script>
+
+</body>
+
+</html>
