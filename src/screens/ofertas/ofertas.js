@@ -25,3 +25,4 @@ export const pageOfertas = [
   '  </div>',
   '</div>'
 ].join('')
+// RESUBIDO
