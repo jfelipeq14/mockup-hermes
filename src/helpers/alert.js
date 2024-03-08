@@ -19,6 +19,6 @@ if (alertTrigger) {
   alertTrigger.addEventListener('click', (e) => {
     e.preventDefault()
     console.log(e.target)
-    appendAlert('Mensaje de la alerta', 'success')
+    appendAlert('No tienes acceso', 'danger')
   })
 }
