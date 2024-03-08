@@ -14,10 +14,11 @@ const appendAlert = (message, type) => {
   alertPlaceholder.append(wrapper)
 }
 
-const formLogin = document.getElementById('formLogin')
-if (formLogin) {
-  formLogin.addEventListener('submit', (e) => {
+const alertTrigger = document.getElementById('btnAlerts')
+if (alertTrigger) {
+  alertTrigger.addEventListener('click', (e) => {
     e.preventDefault()
-    appendAlert('Los datos son incorrectos', 'danger')
+    console.log(e.target)
+    appendAlert('Mensaje de la alerta', 'success')
   })
 }
