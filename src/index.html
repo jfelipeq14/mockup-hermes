@@ -1,143 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hermes</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <style>
-      * {
-        text-transform: uppercase;
-      }
-    </style>
-  </head>
 
-  <body>
-    <header class="p-2">
-      <nav class="navbar navbar-expand-lg bg-transparent">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Hermes</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" class="btn btn-secondary" id="reloadPage"
-                  >INICIO</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" class="btn btn-secondary" id="btnOfertas"
-                  >OFERTAS</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" class="btn btn-secondary" id="btnReservas"
-                  >RESERVAS</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" class="btn btn-secondary" id="btnCreditos"
-                  >CREDITOS</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="btn btn-primary" href="./screens/auth/login.html">
-                  INGRESAR
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <p class="px-2 my-2">
-        Happy Trails |
-        <a href="tel:+573207139262" class="text-decoration-none text-dark"
-          >3207139262</a
-        >
-      </p>
-    </header>
-    <section class="row" id="content"></section>
-    <footer class="container-fluid p-5 mt-5">
-      <div class="d-flex justify-content-between flex-wrap">
-        <article class="col-auto">
-          <h3 class="subtitle">Sections</h3>
-          <ul class="list-unstyled">
-            <li class="py-2">
-              <a href="#nav" class="text-decoration-none">INICIO</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hermes</title>
+  <link rel="stylesheet" href="./style.css" />
+  <style>
+    /* Style the video: 100% width and height to cover the entire window */
+    #myVideo {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+
+    .bg-blur {
+      background: transparent;
+      backdrop-filter: blur(25px);
+    }
+  </style>
+</head>
+
+<body>
+  <header class="p-2 bg-white">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Hermes</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" class="btn btn-secondary" id="reloadPage">INICIO</a>
             </li>
-            <li class="py-2">
-              <a href="#reservaciones" class="text-decoration-none"
-                >RESERVACIONES</a
-              >
+            <li class="nav-item">
+              <a class="nav-link" class="btn btn-secondary" id="btnOfertas">OFERTAS</a>
             </li>
-            <li class="py-2">
-              <a href="#ofertas" class="text-decoration-none">OFERTAS</a>
+            <li class="nav-item">
+              <a class="nav-link" class="btn btn-secondary" id="btnReservas">RESERVAS</a>
             </li>
-            <li class="py-2">
-              <a href="#contacto" class="text-decoration-none">CONTACTO</a>
+            <li class="nav-item">
+              <a class="nav-link" class="btn btn-secondary" id="btnAbout">NOSOTROS</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-primary" href="./screens/auth/login.html">
+                INGRESAR
+              </a>
             </li>
           </ul>
-        </article>
-
-        <article class="">
-          <h3 class="subtitle">PQRS</h3>
-          <p class="py-4">
-            Deja tus peticiones, quejas, reclamos y <br />sugerencias; en
-            nuestro correo electronico: <br />
-            <a href="mailto:happytrails@company.com.co" class="py-4"
-              >happytrails@company.com.co</a
-            >
-          </p>
-        </article>
+        </div>
       </div>
-
-      <hr class="hr" />
-
-      <article class="d-flex justify-content-between flex-wrap">
-        <p class="mx-auto">© 2024 Hermes, Inc.All rights reserved.</p>
-        <ul class="list-unstyled d-flex mx-auto">
-          <li class="px-2">
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-              class="text-decoration-none"
-              >Facebook</a
-            >
-          </li>
-          <li class="px-2">
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-              class="text-decoration-none"
-              >Instragram</a
-            >
-          </li>
-          <li class="px-2">
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-              class="text-decoration-none"
-              >Twitter</a
-            >
-          </li>
+    </nav>
+    <p class="px-2 my-2">
+      Happy Trails |
+      <a href="tel:+573207139262" class="text-decoration-none">3207139262</a>
+    </p>
+  </header>
+  <video autoplay muted loop
+    style="position: fixed; top: 0; right: 0; left: 0; bottom: 0; z-index: -1; min-height: 100vh; min-width: 100vw;">
+    <source src="./assets/vid/bg.mp4" type="video/mp4">
+  </video>
+  <main id="content" class="m-2 p-2 rounded text-white">
+  </main>
+  <footer id="contacto" class="container rounded my-5 bg-blur">
+    <section class="row text-white">
+      <article class="col-sm-12 col-md-6">
+        <header>
+          <h2>Contacto</h2>
+        </header>
+        <ul>
+          <li>Facebook</li>
+          <li>Instagram</li>
+          <li>Tiktok</li>
         </ul>
       </article>
-    </footer>
-    <script src="./service/main.js" type="module" defer></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  </body>
+      <article class="col-sm-12 col-md-6">
+        <header>
+          <h2>Secciones</h2>
+        </header>
+        <ul>
+          <li>
+            Administrador
+            <ul>
+              <li>Secciones que usa</li>
+            </ul>
+          </li>
+          <li>
+            Empleados
+            <ul>
+              <li>Secciones que usa</li>
+            </ul>
+          </li>
+          <li>
+            Usuarios
+            <ul>
+              <li>Secciones que usa</li>
+            </ul>
+          </li>
+          <li>Volver arriba</li>
+        </ul>
+      </article>
+    </section>
+  </footer>
+  <!-- script -->
+  <script src="./service/main.js" type="module" defer></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
 </html>

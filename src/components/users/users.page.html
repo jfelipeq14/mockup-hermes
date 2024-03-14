@@ -1,13 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Users</title>
-  </head>
-  <body>
-    <nav></nav>
-    <main></main>
-    <footer></footer>
-  </body>
-</html>
+<section class="col-sm-12 col-md-6">
+  <form id="form-user">
+    <label>
+      Documento:
+      <input type="text" required />
+      <button>Buscar</button>
+    </label>
+    <label>
+      Nombres:
+      <input type="text" required />
+    </label>
+    <label>
+      Apellidos:
+      <input type="text" required />
+    </label>
+    <label>
+      Correo:
+      <input type="email" required />
+    </label>
+    <label>
+      Telefono:
+      <input type="tel" required />
+    </label>
+    <div class="container">
+      <button>Guardar</button>
+      <button>Nuevo</button>
+    </div>
+  </form>
+</section>
+<section class="col-sm-12 col-md-6">
+  <table class="table">
+    <thead>
+      <th>Documento</th>
+      <th>Nombres</th>
+      <th>Apellidos</th>
+      <th>Correo</th>
+      <th>Telefono</th>
+    </thead>
+    <tbody id="table"></tbody>
+  </table>
+</section>
