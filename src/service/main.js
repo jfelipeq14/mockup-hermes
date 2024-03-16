@@ -1,5 +1,7 @@
-import { serviceContent } from '../components/customers/services/services.js'
+import { serviceContent } from '../components/users/services/services.js'
+import { bookingContent } from '../components/users/reserva/reserva.js'
 import { aboutContent } from '../components/layout/index.js'
+import { appendAlert } from '../helpers/alert.js'
 
 const services = [
   {
@@ -25,6 +27,14 @@ const services = [
 const $content = document.getElementById('content')
 
 if ($content) {
+  const $signInForm = document.getElementById('signInForm')
+  if ($signInForm) {
+    $signInForm.addEventListener('submit', (e) => {
+      location.href = '#'
+      location.reload()
+    })
+  }
+
   $content.innerHTML += serviceContent
   $content.innerHTML += aboutContent
 
@@ -41,13 +51,30 @@ if ($content) {
           <img src="${service.url}" alt="${service.descripcion}" class="card-img">
         </picture>
         <p class="card-title">${service.descripcion}</p>
-        <button class="btn btn-primary btn-sm text-center">RESERVAR AHORA</button>
+        <button class="btn btn-primary btn-sm text-center" id="btnReserva">RESERVAR AHORA</button>
       </article>
       <footer class="card-footer">${service.precio}</footer>
     </article>
     `
     })
   }
+
+  const $btnsReserva = document.querySelectorAll('#btnReserva')
+
+  $btnsReserva.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      console.log(e.target)
+      $content.innerHTML = bookingContent
+
+      const $formBooking = document.getElementById('formBooking')
+      if ($formBooking) {
+        $formBooking.addEventListener('submit', (e) => {
+          e.preventDefault()
+          appendAlert('Reserva exitosa', 'success')
+        })
+      }
+    })
+  })
 
   // $btnAbout.addEventListener('click', () => {
   // })

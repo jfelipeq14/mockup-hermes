@@ -1,5 +1,5 @@
 export const aboutContent = [
-  '  <header class="col-sm-12 text-center">',
+  '  <header class="col-sm-12 text-center" id="about">',
   '    <h2 class="text-capitalize fs-2">NOSOTROS</h2>',
   '  </header>',
   '<section class="row text-black justify-content-center">',
