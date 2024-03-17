@@ -2,6 +2,7 @@ import { serviceContent } from '../components/users/services/services.js'
 import { bookingContent } from '../components/users/reserva/reserva.js'
 import { aboutContent } from '../components/layout/index.js'
 import { appendAlert } from '../helpers/alert.js'
+import { creditsContent } from '../components/layout/credits/credits.js'
 
 const services = [
   {
@@ -74,6 +75,11 @@ if ($content) {
         })
       }
     })
+  })
+
+  const $btnCredits = document.getElementById('btnCredits')
+  $btnCredits.addEventListener('click', () => {
+    $content.innerHTML = creditsContent
   })
 
   // $btnAbout.addEventListener('click', () => {
