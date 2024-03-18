@@ -1,5 +1,6 @@
-export const pageCredits = [
-  '<article class="col-sm-12 col-md-6 d-flex justify-content-center align-items-center">',
+export const creditsContent = [
+  '<section class="row bg-white rounded m-5 text-dark">',
+  '<article class="col-sm-12 col-md-6 d-flex justify-content-center align-items-center ">',
   '<img src="./assets/hermes.jpg" class="w-25" alt="Hermesianos" />',
   '</article>',
   '<article class="col-sm-12 col-md-6 d-flex flex-column justify-content-center align-items-center p-5">',
@@ -8,5 +9,7 @@ export const pageCredits = [
   '<footer>',
   '<a href="https://github.com/juan061734" class="text-decoration-none">Juan Pablo</a> | <a href="https://github.com/andrey0108" class="text-decoration-none">Andrey</a> | <a href="https://github.com/jfelipeq14" class="text-decoration-none">Felipe</a>',
   '</footer>',
-  '</article>'
+  '</article>',
+  '</section>'
+
 ].join('')
