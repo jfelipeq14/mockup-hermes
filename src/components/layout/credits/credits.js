@@ -1,7 +1,7 @@
 export const creditsContent = [
   '<section class="row bg-white rounded m-5 text-dark">',
   '<article class="col-sm-12 col-md-6 d-flex justify-content-center align-items-center ">',
-  '<img src="./assets/hermes.jpg" class="w-25" alt="Hermesianos" />',
+  '<img src="./assets/logo/hermes.svg" class="w-25 my-5" alt="Hermesianos" />',
   '</article>',
   '<article class="col-sm-12 col-md-6 d-flex flex-column justify-content-center align-items-center p-5">',
   '<header>Hermesianos</header>',

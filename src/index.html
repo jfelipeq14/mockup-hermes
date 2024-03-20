@@ -1,13 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hermes</title>
-    <link rel="stylesheet" href="./style.css" />
-    <style>
-      /* Style the video: 100% width and height to cover the entire window */
-      #myVideo {
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hermes</title>
+  <link rel="stylesheet" href="./style.css" />
+  <style>
+    *,
+    *::after,
+    *::before {
+      text-transform: uppercase;
+    }
+
+    .bg-blur {
+      background: #00000050;
+      backdrop-filter: blur(8px);
+      box-shadow: 0px 0px 15px 0px #00000082;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark rounded bg-blur m-2">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        Hermes
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" class="btn btn-secondary" href="#">INICIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" class="btn btn-secondary" href="#services">SERVICIOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" class="btn btn-secondary" href="#about">NOSOTROS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" class="btn btn-secondary" href="#contacto">CONTACTO</a>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#popup">
+              INGRESAR
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <video autoplay muted loop style="
         width: 100vw;
         height: 100vh;
         object-fit: cover;
@@ -17,191 +64,90 @@
         top: 0;
         bottom: 0;
         z-index: -1;
-      }
+      ">
+    <source src="./assets/vid/bg.mp4" type="video/mp4" />
+  </video>
+  <section id="alerts"></section>
+  <dialog class="modal bg-blur" id="popup" tabindex="-1" aria-labelledby="popupLabel" aria-hidden="true">
+    <section class="modal-dialog">
+      <article class="modal-content">
+        <header class="modal-header">
+          <h1 class="modal-title fs-5" id="popupLabel">Ingresar</h1>
+          <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </header>
+        <form id="signInForm" class="modal-body mx-auto text-center py-2 w-75">
+          <div class="form-floating bg-white">
+            <input type="email" id="login-email" class="form-control" placeholder="kolibrishcompany@gmail.com"
+              required />
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating">
+            <input type="password" id="login-password" class="form-control" placeholder="************" required />
+            <label for="floatingPassword">Password</label>
+          </div>
+          <button type="submit" class="btn btn-primary mx-auto my-2 text-center">
+            INGRESAR
+          </button>
+        </form>
+        <footer class="modal-footer border-top w-100">
+          <p class="text-center mx-auto">&copy; Hermes – 2024</p>
+        </footer>
+      </article>
+    </section>
+  </dialog>
+  <main id="content" class="my-2 mx-auto p-5 rounded text-white"></main>
+  <footer id="contacto" class="container my-2 mx-auto p-5 rounded bg-blur">
+    <section class="row text-white">
+      <article class="col-sm-12 col-md-6">
+        <header>
+          <h2>Contacto</h2>
+        </header>
+        <ul>
+          <li>Facebook</li>
+          <li>Instagram</li>
+          <li>Tiktok</li>
+        </ul>
+        <footer>
+          <p class="my-2 text-center">
+            Happy Trails |
+            <a href="tel:+573207139262" class="text-decoration-none">3207139262</a>
+          </p>
+        </footer>
+      </article>
+      <article class="col-sm-12 col-md-6">
+        <header>
+          <h2>Secciones</h2>
+        </header>
+        <ul>
+          <li>
+            Administrador
+            <ul>
+              <li>Secciones que usa</li>
+            </ul>
+          </li>
+          <li>
+            Empleados
+            <ul>
+              <li>Secciones que usa</li>
+            </ul>
+          </li>
+          <li>
+            Usuarios
+            <ul>
+              <li>Secciones que usa</li>
+            </ul>
+          </li>
+          <li>Volver arriba</li>
+        </ul>
+      </article>
+      <button class="btn btn-dark w-50 mx-auto" id="btnCredits">
+        HERMESIANOS
+      </button>
+    </section>
+  </footer>
+  <!-- script -->
+  <script src="./service/main.js" type="module" defer></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
 
-      .bg-blur {
-        background: #00000050;
-        backdrop-filter: blur(8px);
-        box-shadow: 0px 0px 15px 0px #00000082;
-      }
-    </style>
-  </head>
-
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark rounded bg-blur m-2">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Hermes</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" class="btn btn-secondary" href="#">INICIO</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" class="btn btn-secondary" href="#services"
-                >SERVICIOS</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" class="btn btn-secondary" href="#about"
-                >NOSOTROS</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" class="btn btn-secondary" href="#contacto"
-                >CONTACTO</a
-              >
-            </li>
-            <li class="nav-item">
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#popup"
-              >
-                INGRESAR
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <video
-      autoplay
-      muted
-      loop
-      style="
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        z-index: -1;
-        min-height: 100vh;
-        min-width: 100vw;
-      "
-    >
-      <source src="./assets/vid/bg.mp4" type="video/mp4" />
-    </video>
-    <section id="alerts"></section>
-    <dialog
-      class="modal bg-blur"
-      id="popup"
-      tabindex="-1"
-      aria-labelledby="popupLabel"
-      aria-hidden="true"
-    >
-      <section class="modal-dialog">
-        <article class="modal-content">
-          <header class="modal-header">
-            <h1 class="modal-title fs-5" id="popupLabel">Ingresar</h1>
-            <button
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </header>
-          <form
-            id="signInForm"
-            class="modal-body mx-auto text-center py-2 w-75"
-          >
-            <div class="form-floating bg-white">
-              <input
-                type="email"
-                id="login-email"
-                class="form-control"
-                placeholder="kolibrishcompany@gmail.com"
-                required
-              />
-              <label for="floatingInput">Email address</label>
-            </div>
-            <div class="form-floating">
-              <input
-                type="password"
-                id="login-password"
-                class="form-control"
-                placeholder="************"
-                required
-              />
-              <label for="floatingPassword">Password</label>
-            </div>
-            <button
-              type="submit"
-              class="btn btn-primary mx-auto my-2 text-center"
-            >
-              INGRESAR
-            </button>
-          </form>
-          <footer class="modal-footer border-top w-100">
-            <p class="text-center mx-auto">&copy; Hermes – 2024</p>
-          </footer>
-        </article>
-      </section>
-    </dialog>
-    <main id="content" class="my-2 mx-auto p-5 rounded text-white"></main>
-    <footer id="contacto" class="container my-2 mx-auto p-5 rounded bg-blur">
-      <section class="row text-white">
-        <article class="col-sm-12 col-md-6">
-          <header>
-            <h2>Contacto</h2>
-          </header>
-          <ul>
-            <li>Facebook</li>
-            <li>Instagram</li>
-            <li>Tiktok</li>
-          </ul>
-          <footer>
-            <p class="my-2 text-center">
-              Happy Trails |
-              <a href="tel:+573207139262" class="text-decoration-none"
-                >3207139262</a
-              >
-            </p>
-          </footer>
-        </article>
-        <article class="col-sm-12 col-md-6">
-          <header>
-            <h2>Secciones</h2>
-          </header>
-          <ul>
-            <li>
-              Administrador
-              <ul>
-                <li>Secciones que usa</li>
-              </ul>
-            </li>
-            <li>
-              Empleados
-              <ul>
-                <li>Secciones que usa</li>
-              </ul>
-            </li>
-            <li>
-              Usuarios
-              <ul>
-                <li>Secciones que usa</li>
-              </ul>
-            </li>
-            <li>Volver arriba</li>
-          </ul>
-        </article>
-        <button class="btn btn-dark w-50 mx-auto" id="btnCredits">
-          HERMESIANOS
-        </button>
-      </section>
-    </footer>
-    <!-- script -->
-    <script src="./service/main.js" type="module" defer></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  </body>
 </html>
